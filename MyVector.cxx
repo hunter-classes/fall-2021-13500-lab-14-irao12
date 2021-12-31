@@ -52,3 +52,12 @@ void MyVector<T>::pop_back(){
   if (myvector_size != 0)
     myvector_size--;
 }
+
+template <class T>
+void MyVector<T>::pop_back(T n){
+  int size = myvector_size;
+  for (int i = n; i < size-1; i++){
+    data[i] = data[i+1];
+  }
+  myvector_size--;
+}
