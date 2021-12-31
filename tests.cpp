@@ -54,4 +54,12 @@ TEST_CASE("Testing pop_back()"){
     integers.pop_back();
     CHECK(integers.size()==10-i-1);
   }
+  MyVector<double> doubles;
+  for (int i = 0; i < 10; i++){
+    doubles.push_back(i);
+  }
+  for (int i = 0 ; i < 10; i++){
+    doubles.pop_back();
+    CHECK(doubles.size()==10-i-1);
+  }
 }
