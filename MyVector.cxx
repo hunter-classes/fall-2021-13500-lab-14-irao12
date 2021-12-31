@@ -61,3 +61,8 @@ void MyVector<T>::pop_back(T n){
   }
   myvector_size--;
 }
+
+template <class T>
+void MyVector<T>::clear(){
+  myvector_size = 0;
+}

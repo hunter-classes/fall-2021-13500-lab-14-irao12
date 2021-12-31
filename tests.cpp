@@ -79,3 +79,22 @@ TEST_CASE("Testing pop_back(int n)"){
     CHECK(integers[i]==i+2);
   }
 }
+
+TEST_CASE("Testing clear()"){
+  MyVector<int> integers;
+  for (int i = 0; i < 9; i++){
+    integers.push_back(i);
+  }
+  CHECK(integers.size() == 9);
+  integers.clear();
+  CHECK(integers.size() == 0);
+
+  MyVector<std::string> strings;
+  for (int i = 0; i < 9; i++){
+    strings.push_back(std::to_string(i));
+  }
+  CHECK(strings.size() == 9);
+  strings.clear();
+  CHECK(strings.size()==0);
+
+}
