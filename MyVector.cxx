@@ -9,6 +9,12 @@ MyVector<T>::MyVector(){
 }
 
 template <class T>
+MyVector<T>::~MyVector(){
+  delete [] data;
+  data = nullptr;
+}
+
+template <class T>
 int MyVector<T>::size() const{
   return myvector_size;
 }

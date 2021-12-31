@@ -4,6 +4,7 @@ template <class T>
 class MyVector{
 public:
   MyVector();
+  ~MyVector();
   int size() const;
   int capacity() const;
   bool empty() const;
