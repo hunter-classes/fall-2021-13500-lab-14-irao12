@@ -4,8 +4,8 @@ template <class T>
 class MyVector{
 public:
   MyVector();
-  int size();
-  int capacity();
+  int size() const;
+  int capacity() const;
   bool empty() const;
   void push_back(T n);
   void pop_back(T n);

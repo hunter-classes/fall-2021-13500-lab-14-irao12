@@ -9,12 +9,12 @@ MyVector<T>::MyVector(){
 }
 
 template <class T>
-int MyVector<T>::size(){
+int MyVector<T>::size() const{
   return myvector_size;
 }
 
 template <class T>
-int MyVector<T>::capacity(){
+int MyVector<T>::capacity() const{
   return myvector_cap;
 }
 
