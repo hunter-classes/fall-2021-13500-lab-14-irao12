@@ -13,7 +13,7 @@ TEST_CASE("Testing constructor"){
 }
 
 
-TEST_CASE("Testing push_back and operator[]"){
+TEST_CASE("Testing push_back, operator[], size, and capacity"){
   //Testing with a MyVector of ints
   MyVector<int> integers;
   for (int i = 0 ; i < 10; i++){
@@ -43,4 +43,15 @@ TEST_CASE("Testing push_back and operator[]"){
   CHECK(strings[10] == "11");
   //capacity doubles when size is larger than the current capacity
   CHECK(strings.capacity() == 20);
+}
+
+TEST_CASE("Testing pop_back()"){
+  MyVector<int> integers;
+  for (int i = 0; i < 10; i++){
+    integers.push_back(i);
+  }
+  for (int i = 0 ; i < 10; i++){
+    integers.pop_back();
+    CHECK(integers.size()==10-i-1);
+  }
 }

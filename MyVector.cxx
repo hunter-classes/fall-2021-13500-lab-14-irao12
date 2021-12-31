@@ -49,6 +49,6 @@ T& MyVector<T>::operator[](int n){
 template <class T>
 void MyVector<T>::pop_back(){
   //sets the newest element to 0 and decrements the size;
-  data[myvector_size-1] = 0;
-  myvector_size--;
+  if (myvector_size != 0)
+    myvector_size--;
 }
