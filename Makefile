@@ -11,4 +11,4 @@ tests.o: tests.cpp MyVector.h MyVector.cxx
 	g++ -std=c++11 -c tests.cpp
 
 clean:
-	rm *.o
+	rm *.o main tests
