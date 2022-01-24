@@ -40,6 +40,7 @@ void MyVector<T>::push_back(T n){
     for (int i = 0; i < myvector_size; i++){
       new_data[i] = data[i];
     }
+    delete [] data;
     data = new_data;
   }
   //adds n to the MyVector
@@ -55,12 +56,16 @@ T& MyVector<T>::operator[](int n){
 template <class T>
 void MyVector<T>::pop_back(){
   //sets the newest element to 0 and decrements the size;
-  if (myvector_size != 0)
+  if (myvector_size != 0){
     myvector_size--;
+    data[myvector_size]=0;
+  }
 }
 
 template <class T>
-void MyVector<T>::pop_back(T n){
+void MyVector<T>::pop_back(int n){
+  if (n > myvector_size) return; //stops if unable to remove the nth element
+
   int size = myvector_size;
   for (int i = n; i < size-1; i++){
     data[i] = data[i+1];

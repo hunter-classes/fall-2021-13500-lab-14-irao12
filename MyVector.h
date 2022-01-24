@@ -9,7 +9,7 @@ public:
   int capacity() const;
   bool empty() const;
   void push_back(T n);
-  void pop_back(T n);
+  void pop_back(int n);
   void pop_back();
   void clear();
   T &operator[](int n);
