@@ -1,5 +1,6 @@
 #include <iostream>
 #include "MyVector.h"
+#include <cassert>
 
 template <class T>
 MyVector<T>::MyVector(){
@@ -50,6 +51,7 @@ void MyVector<T>::push_back(T n){
 
 template <class T>
 T& MyVector<T>::operator[](int n){
+  assert(n >= 0 && n < myvector_size);
   return data[n];
 }
 
@@ -58,7 +60,6 @@ void MyVector<T>::pop_back(){
   //sets the newest element to 0 and decrements the size;
   if (myvector_size != 0){
     myvector_size--;
-    data[myvector_size]=0;
   }
 }
 
