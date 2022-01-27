@@ -98,3 +98,14 @@ TEST_CASE("Testing clear()"){
   CHECK(strings.size()==0);
 
 }
+
+TEST_CASE("Testing assignment"){
+  MyVector<std::string> strings;
+  for (int i = 0; i < 9; i++){
+    strings.push_back(std::to_string(i));
+  }
+  strings[0]="Hello";
+  CHECK(strings[0] == "Hello");
+  strings[5] = "Cookies";
+  CHECK(strings[5] == "Cookies");
+}

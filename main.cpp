@@ -62,6 +62,14 @@ int main(){
   std::cout << "capacity(): " << int_MyVector.capacity() << '\n';
   std::cout << "empty(): " << std::boolalpha << int_MyVector.empty() << '\n';
 
+  std::cout << "\nTesting assignment:" << '\n';
+  std::cout << "After int_MyVector[0] = 100:" << '\n';
+  int_MyVector[3] = 100;
+  for (int i = 0 ; i < int_MyVector.size(); i++){
+    std::cout << int_MyVector[i] << ' ';
+  }
+  std::cout  << '\n';
+
   int_MyVector.clear();
   std::cout << '\n';
   std::cout << "int_MyVector after clear() call" << '\n';
@@ -72,6 +80,6 @@ int main(){
   std::cout << "size(): " << int_MyVector.size() << '\n';
   std::cout << "capacity(): " << int_MyVector.capacity() << '\n';
   std::cout << "empty(): " << std::boolalpha << int_MyVector.empty() << '\n';
-  
+
   return 0;
 }
