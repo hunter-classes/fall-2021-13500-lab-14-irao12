@@ -64,7 +64,7 @@ void MyVector<T>::pop_back(){
 
 template <class T>
 void MyVector<T>::pop_back(int n){
-  if (n > myvector_size) return; //stops if unable to remove the nth element
+  if (n > myvector_size || n < 0) return; //stops if unable to remove the nth element
 
   int size = myvector_size;
   for (int i = n; i < size-1; i++){
