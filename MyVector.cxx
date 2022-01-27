@@ -70,6 +70,7 @@ void MyVector<T>::pop_back(int n){
   for (int i = n; i < size-1; i++){
     data[i] = data[i+1];
   }
+  data[myvector_size-1] = 0;
   myvector_size--;
 }
 
